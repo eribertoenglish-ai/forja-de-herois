@@ -1,4 +1,18 @@
 import streamlit as st
+import streamlit as st
+
+# Injeção de PWA Manifest e Service Worker para o PWABuilder
+pwa_code = """
+<link rel="manifest" href="data:application/json;base64,ewogICJuYW1lIjogIkZvcmphIGRlIEhlcvNpc2siLAogICJzaG9ydF9uYW1lIjogIkZvcmphSGVy82lzIiwKICAic3RhcnRfdXJsIjogIi8iLAogICJkaXNwbGF5IjogInN0YW5kYWxvbmUiLAogICJiYWNrZ3JvdW5kX2NvbG9yIjogIiMxMjEyMTQiLAogICJ0aGVtZV9jb2xvciI6ICIjRDk3NzA2IiwKICAiaWNvbnMiOiBbCiAgICB7CiAgICAgICJzcmMiOiAiaHR0cHM6Ly9zdHJlYW1saXQuaW8vZmF2aWNvbi5jb24iLAogICAgICAic2l6ZXMiOiAiMTkyeDE5MiIsCiAgICAgICJ0eXBlIjogImltYWdlL3BuZyIKICAgIH0KICBdCn0=">
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('data:text/javascript;base64,c2VsZi5hZGRFdmVudExpc3RlbmVyKCdmZXRjaCcsIGZ1bmN0aW9uKGV2ZW50KSB7fSk7');
+  });
+}
+</script>
+"""
+st.markdown(pwa_code, unsafe_allow_html=True)
 
 # Configuração da página Streamlit (deve ser a primeira chamada Streamlit)
 st.set_page_config(
