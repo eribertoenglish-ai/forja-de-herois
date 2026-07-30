@@ -4,3 +4,5 @@ pandas
 pypdf
 pillow
 pypdf2
+supabase
+bcrypt
