@@ -8,6 +8,16 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
+# Na barra lateral ou onde achar melhor
+st.sidebar.markdown("---")
+st.sidebar.subheader("📚 Material de Consulta")
+
+st.sidebar.link_button(
+    label="📖 Abrir Livro de Regras (PDF)",
+    url="https://drive.google.com/file/d/SEU_LINK_DO_DRIVE_AQUI/view?usp=sharing",
+    use_container_width=True
+)
+
 # 2. Injeção PWA para o PWABuilder / App Celular
 pwa_code = """
 <link rel="manifest" href="data:application/json;base64,ewogICJuYW1lIjogIkZvcmphIGRlIEhlcvNpc2siLAogICJzaG9ydF9uYW1lIjogIkZvcmphSGVy82lzIiwKICAic3RhcnRfdXJsIjogIi8iLAogICJkaXNwbGF5IjogInN0YW5kYWxvbmUiLAogICJiYWNrZ3JvdW5kX2NvbG9yIjogIiMxMjEyMTQiLAogICJ0aGVtZV9jb2xvciI6ICIjRDk3NzA2IiwKICAiaWNvbnMiOiBbCiAgICB7CiAgICAgICJzcmMiOiAiaHR0cHM6Ly9zdGF0aWMuOTEyd2ViLmNvbS9mYXZpY29ucy9nb29nbGUucG5nIiwKICAgICAgInNpemVzIjogIjUxMng1MTIiLAogICAgICAidHlwZSI6ICJpbWFnZS9wbmciLAogICAgICAicHVycG9zZSI6ICJhbnkgbWFza2FibGUiCiAgICB9CiAgXQp9">
