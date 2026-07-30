@@ -14,7 +14,7 @@ st.sidebar.subheader("📚 Material de Consulta")
 
 st.sidebar.link_button(
     label="📖 Abrir Livro de Regras (PDF)",
-    url="https://drive.google.com/file/d/SEU_LINK_DO_DRIVE_AQUI/view?usp=sharing",
+    url="https://drive.google.com/file/d/1OvDHpap5QTJMles57zNyAZFv-tQrWxuu/view?usp=sharing",
     use_container_width=True
 )
 
